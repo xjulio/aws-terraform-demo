@@ -53,6 +53,8 @@ data "aws_ssm_parameter" "amzn-linux-ami" {
 resource "aws_instance" "instance" {
   instance_type        = "t2.micro"
   iam_instance_profile = aws_iam_instance_profile.iam_for_ec2_instance_profile.name
+  
+  xjulio_break = true
 
   # ssm paramter store latest ami value
   ami = data.aws_ssm_parameter.amzn-linux-ami.value
