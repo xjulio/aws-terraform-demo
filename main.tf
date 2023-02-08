@@ -31,8 +31,8 @@ resource "aws_security_group" "sg" {
 
   # Open connection from hell
   ingress {
-    from_port   = 666
-    to_port     = 666
+    from_port   = 667
+    to_port     = 667
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
